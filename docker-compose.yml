@@ -1,0 +1,10 @@
+version: '3'
+services:
+  api:
+    image: geo-django-api:latest
+    build: .
+    expose:
+      - 8000
+    ports:
+      - "8000:8000"
+    command: bash -c "gunicorn aiqa_geo_django.wsgi:application --bind 0.0.0.0:8000 --workers 1"
