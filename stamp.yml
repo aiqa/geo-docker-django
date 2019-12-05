@@ -1,0 +1,11 @@
+filename:    'version.txt'
+regex:       '|(?P<version>[\d\.]+)|'
+replacement: '{{ version }}'
+
+replacements:
+
+    -
+        filename:    'documentation/api.yml'
+        regex:       '|version: (?P<version>[\d\.]+)|'
+        replacement: 'version: {{ version }}'
+
