@@ -1,8 +1,8 @@
 import requests
 from assertpy import assert_that
 
-from . import endpoints
-from .models import random_mountain_body
+from .. import endpoints
+from ..models import random_mountain_body
 
 
 class TestMountainPost:

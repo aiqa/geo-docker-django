@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-from . import endpoints
+from .. import endpoints
 
 
 class TestRiverDelete:
