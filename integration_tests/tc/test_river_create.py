@@ -2,8 +2,8 @@ import pytest
 import requests
 from assertpy import assert_that
 
-from . import endpoints
-from .models import random_river_body
+from .. import endpoints
+from ..models import random_river_body
 
 
 class TestRiverCreate:
