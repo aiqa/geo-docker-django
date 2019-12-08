@@ -1,0 +1,10 @@
+FROM node:13.3.0-stretch-slim
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY ./frontend .
+
+RUN yarn install && yarn run build
+
+CMD yarn run start --host 0.0.0.0

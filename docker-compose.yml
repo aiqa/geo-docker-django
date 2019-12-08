@@ -2,9 +2,21 @@ version: '3'
 services:
   api:
     image: geo-django-api:latest
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     expose:
       - 8000
     ports:
       - "8000:8000"
     command: bash -c "gunicorn aiqa_geo_django.wsgi:application --bind 0.0.0.0:8000 --workers 1"
+  frontend:
+    image: geo-django-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    command: bash -c "yarn run start --host 0.0.0.0"
