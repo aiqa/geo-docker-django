@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ..models import River
+from ..models.river import River
 
 
 class RiverSerializer(serializers.ModelSerializer):
