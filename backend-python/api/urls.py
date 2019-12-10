@@ -1,14 +1,17 @@
-from django.urls import re_path, path
+from django.urls import path
 
-from .views import city_views
-from .views import mountain_views
-from .views import river_views
+from .views.city.city_views import CityDetail
+from .views.city.city_get_list import CityList
+from .views.mountain.mountain_get_list import MountainList
+from .views.mountain.mountain_views import MountainDetail
+from .views.river.river_get_list import RiverList
+from .views.river.river_views import RiverDetail
 
 urlpatterns = [
-    path('city', city_views.CityList.as_view(), name='city-list'),
-    path('city/<int:pk>', city_views.CityDetail.as_view(), name='city-details'),
-    path('river', river_views.RiverList.as_view(), name='river-list'),
-    path('river/<int:pk>', river_views.RiverDetail.as_view(), name='river-details'),
-    path('mountain', mountain_views.MountainList.as_view(), name='mountain-list'),
-    path('mountain/<int:pk>', mountain_views.MountainDetail.as_view(), name='mountain-details')
+    path('city', CityList.as_view(), name='city-list'),
+    path('city/<int:pk>', CityDetail.as_view(), name='city-details'),
+    path('river', RiverList.as_view(), name='river-list'),
+    path('river/<int:pk>', RiverDetail.as_view(), name='river-details'),
+    path('mountain', MountainList.as_view(), name='mountain-list'),
+    path('mountain/<int:pk>', MountainDetail.as_view(), name='mountain-details')
 ]
