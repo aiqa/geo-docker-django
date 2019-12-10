@@ -1,0 +1,47 @@
+#
+# AIQA configuration file
+#
+
+aiqa:
+    apiUrl: 'https://app.aiqa.tech/api/'
+    cliTimeout: 100.0
+project:
+    id: 24
+    name: 'GEO API (DJANGO)'
+    rootFolder: 'geo-docker-django'
+git:
+    mainBranch: 'master'
+    binaryPath: '/usr/bin/git'
+user:
+    systemFamily: 'unix'
+    # email: GIT_CONFIG
+    # email: LAST_COMMIT_AUTHOR
+    email: 'demo@aiqa.tech'
+    apiToken: '6c422692-b0e6-4d09-8c0b-a90cc61e111b'
+testTool:
+    type: 'parallel'
+    reportPath: './__ci_parallel.log'
+    regExp: '/^pytest (.*\.py)$/'
+testCases:
+    subfolder: 'integration_tests'
+    scenariosPath: './__ci_scenarios_list.txt'
+    include:
+        -
+            directory: './tc'
+            fileMask: '*.py'
+    exclude:
+srcFiles:
+    subfolder: 'backend-python'
+    include:
+        -
+            directory: './../backend-python'
+            fileMask: '*.*'
+    exclude:
+        -
+            directory: '.pytest_cache'
+configuration:
+    exportFilename: 'someFile.yml'
+    mlService: 'api'
+pdepend:
+    binaryPath: '/aiqa-var/vendor/pdepend/pdepend/src/bin/pdepend'
+encryption: false
