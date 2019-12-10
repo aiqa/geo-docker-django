@@ -2,3 +2,14 @@
 __pycache__
 vendor
 node_modules
+
+__ci_scenarios_list.txt
+__ci_parallel.log
+__ci_result.txt
+
+_ci_vars_personal.sh
+integration_tests/aiqa.yml
+aiqa.tmp
+status.tmp
+venv
+Pipfile.lock
