@@ -6,7 +6,7 @@ aiqa:
     apiUrl: 'https://app.aiqa.tech/api/'
     cliTimeout: 100.0
 project:
-    id: 24
+    id: 25
     name: 'GEO API (DJANGO)'
     rootFolder: 'geo-docker-django'
 git:
@@ -17,7 +17,7 @@ user:
     # email: GIT_CONFIG
     # email: LAST_COMMIT_AUTHOR
     email: 'demo@aiqa.tech'
-    apiToken: '6c422692-b0e6-4d09-8c0b-a90cc61e111b'
+    apiToken: '36cb8d94-d114-4aec-ab0d-c904891fc56b'
 testTool:
     type: 'parallel'
     reportPath: './__ci_parallel.log'
